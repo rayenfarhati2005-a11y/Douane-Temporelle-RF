@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class VerificationActivity extends AppCompatActivity {
 
-    // التحقق إذا كان العدد أوليا
+    //  bch na3mlou test lel nombre premier
     public static boolean estPremier(int nombre) {
 
         if (nombre < 2) {
@@ -31,7 +31,7 @@ public class VerificationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification);
 
-        // ربط عناصر الواجهة
+        //  bch norbtou les elements mte3 l fichier xml lel java
         TextView txtNom = findViewById(R.id.txt_nom_verif_rf);
         TextView txtAge = findViewById(R.id.txt_age_verif_rf);
         TextView txtMotif = findViewById(R.id.txt_motif_verif_rf);
@@ -39,7 +39,7 @@ public class VerificationActivity extends AppCompatActivity {
         Button btnApprouver = findViewById(R.id.btn_approuver_rf);
         Button btnRefuser = findViewById(R.id.btn_refuser_rf);
 
-        // استقبال المعلومات من النشاط الأول
+        // bch nekhdhou les info mel MainActivity
         String nom = getIntent().getStringExtra(
                 MainActivity.creerCle("3565", "NOM_VOYAGEUR"));
 
@@ -52,15 +52,15 @@ public class VerificationActivity extends AppCompatActivity {
         String motif = getIntent().getStringExtra(
                 MainActivity.creerCle("3565", "MOTIF_VOYAGE"));
 
-        // حساب العمر الزمني
+        // bch na3mlou calculer l'âge
         int ageTemporel = anneeDestination - anneeNaissance;
 
-        // عرض معلومات المسافر
+        // bch na3mlou affiche l les info
         txtNom.setText("Nom : " + nom);
         txtAge.setText("Age temporel : " + ageTemporel + " ans");
         txtMotif.setText("Motif : " + motif);
 
-        // التحقق من شروط المفارقة الزمنية
+        // bch na3mlou check lel age temporel
         if ("Modification du passé".equals(motif)
                 && estPremier(ageTemporel)) {
 
@@ -71,18 +71,18 @@ public class VerificationActivity extends AppCompatActivity {
                     Toast.LENGTH_LONG).show();
         }
 
-        // الموافقة على الرحلة
+        // bch nconfirmiw l voyage
         btnApprouver.setOnClickListener(v -> {
             envoyerVerdict(true, nom);
         });
 
-        // رفض الرحلة
+        // bch norfdhou l voyage
         btnRefuser.setOnClickListener(v -> {
             envoyerVerdict(false, nom);
         });
     }
 
-    // إرسال النتيجة إلى النشاط الثالث
+    // bch naba3thou les resulta lel activity 3
     private void envoyerVerdict(boolean verdict, String nom) {
 
         Intent intent = new Intent(
