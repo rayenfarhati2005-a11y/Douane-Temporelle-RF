@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    // تعريف المفاتيح باستعمال رقم التسجيل
+    // bch na3mlou définition mte3 l clé
     public static String creerCle(String matricule, String nomCle) {
         return matricule + "_" + nomCle;
     }
@@ -22,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ربط عناصر الواجهة
+        // bch norbtou les elements mte3 l fichier xml lel java
         EditText edtNom = findViewById(R.id.edt_nom_rf);
         EditText edtNaissance = findViewById(R.id.edt_naissance_rf);
         EditText edtDestination = findViewById(R.id.edt_destination_rf);
         Spinner spinnerMotif = findViewById(R.id.spinner_motif_rf);
         Button btnInspecter = findViewById(R.id.btn_inspecter_rf);
 
-        // إضافة أسباب السفر إلى القائمة
+        // bch nzidou les option mte3 l voyage
         String[] motifs = {
                 "Tourisme",
                 "Modification du passé",
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         spinnerMotif.setAdapter(adapter);
 
-        // عند الضغط على زر فحص الملف
+
         btnInspecter.setOnClickListener(v -> {
 
             String nom = edtNom.getText().toString().trim();
@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             String destination = edtDestination.getText().toString().trim();
             String motif = spinnerMotif.getSelectedItem().toString();
 
-            // التحقق من إدخال المعلومات
+            // bch na3mlou test lel champs vide b Toast
             if (nom.isEmpty() || naissance.isEmpty() || destination.isEmpty()) {
                 Toast.makeText(this,
                         "Veuillez remplir tous les champs",
@@ -82,14 +82,14 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
-            // إنشاء Intent صريح للانتقال إلى النشاط الثاني
+            // bch na3mlou Intent elli bch ta3mel l communication bin act1 w act2
             Intent intent = new Intent(MainActivity.this, VerificationActivity.class);
 
-            // إرسال المعلومات باستعمال المفاتيح الديناميكية
-            intent.putExtra(creerCle("1234", "NOM_VOYAGEUR"), nom);
-            intent.putExtra(creerCle("1234", "ANNEE_NAISSANCE"), anneeNaissance);
-            intent.putExtra(creerCle("1234", "ANNEE_DESTINATION"), anneeDestination);
-            intent.putExtra(creerCle("1234", "MOTIF_VOYAGE"), motif);
+            // bch naba3thou les info lel activity thenya
+            intent.putExtra(creerCle("3565", "NOM_VOYAGEUR"), nom);
+            intent.putExtra(creerCle("3565", "ANNEE_NAISSANCE"), anneeNaissance);
+            intent.putExtra(creerCle("3565", "ANNEE_DESTINATION"), anneeDestination);
+            intent.putExtra(creerCle("3565", "MOTIF_VOYAGE"), motif);
 
             startActivity(intent);
         });

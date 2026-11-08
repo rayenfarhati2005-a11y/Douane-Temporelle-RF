@@ -41,16 +41,16 @@ public class VerificationActivity extends AppCompatActivity {
 
         // استقبال المعلومات من النشاط الأول
         String nom = getIntent().getStringExtra(
-                MainActivity.creerCle("1234", "NOM_VOYAGEUR"));
+                MainActivity.creerCle("3565", "NOM_VOYAGEUR"));
 
         int anneeNaissance = getIntent().getIntExtra(
-                MainActivity.creerCle("1234", "ANNEE_NAISSANCE"), 0);
+                MainActivity.creerCle("3565", "ANNEE_NAISSANCE"), 0);
 
         int anneeDestination = getIntent().getIntExtra(
-                MainActivity.creerCle("1234", "ANNEE_DESTINATION"), 0);
+                MainActivity.creerCle("3565", "ANNEE_DESTINATION"), 0);
 
         String motif = getIntent().getStringExtra(
-                MainActivity.creerCle("1234", "MOTIF_VOYAGE"));
+                MainActivity.creerCle("3565", "MOTIF_VOYAGE"));
 
         // حساب العمر الزمني
         int ageTemporel = anneeDestination - anneeNaissance;
@@ -91,12 +91,12 @@ public class VerificationActivity extends AppCompatActivity {
         );
 
         intent.putExtra(
-                MainActivity.creerCle("1234", "VERDICT_FINAL"),
+                MainActivity.creerCle("3565", "VERDICT_FINAL"),
                 verdict
         );
 
         intent.putExtra(
-                MainActivity.creerCle("1234", "NOM_VOYAGEUR"),
+                MainActivity.creerCle("3565", "NOM_VOYAGEUR"),
                 nom
         );
 

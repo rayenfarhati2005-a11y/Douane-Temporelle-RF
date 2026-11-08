@@ -23,12 +23,12 @@ public class ResultActivity extends AppCompatActivity {
 
         // استقبال النتيجة واسم المسافر
         boolean verdict = getIntent().getBooleanExtra(
-                MainActivity.creerCle("1234", "VERDICT_FINAL"),
+                MainActivity.creerCle("3565", "VERDICT_FINAL"),
                 false
         );
 
         String nom = getIntent().getStringExtra(
-                MainActivity.creerCle("1234", "NOM_VOYAGEUR")
+                MainActivity.creerCle("3565", "NOM_VOYAGEUR")
         );
 
         // تحديد النتيجة وتغيير لون الخلفية
