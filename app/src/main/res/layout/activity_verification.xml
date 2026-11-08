@@ -14,7 +14,7 @@
         android:layout_height="200dp"
         android:layout_weight="0.3"
         android:src="@android:drawable/ic_menu_info_details"
-        android:contentDescription="@string/passeport_temporel"
+        android:contentDescription=""
         android:scaleType="centerInside"/>
 
     <!-- المعلومات على اليمين -->

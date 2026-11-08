@@ -29,7 +29,7 @@ public class VerificationActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.verification_activity);
+        setContentView(R.layout.activity_verification);
 
         // ربط عناصر الواجهة
         TextView txtNom = findViewById(R.id.txt_nom_verif_rf);

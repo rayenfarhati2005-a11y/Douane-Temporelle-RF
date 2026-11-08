@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Douane Temporelle</string>
+    <string name="bon_voyage">Bon voyage %1$s !</string>
+    <string name="arrestation_temporelle">%1$s est en état d\'arrestation temporelle !</string>
 </resources>
