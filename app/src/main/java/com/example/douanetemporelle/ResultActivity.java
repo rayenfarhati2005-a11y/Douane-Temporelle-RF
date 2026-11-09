@@ -16,12 +16,12 @@ public class ResultActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
 
-        // ربط عناصر الواجهة
+        // bch norbtou les elements mte3 l fichier xml lel java
         LinearLayout layout = findViewById(R.id.layout_result_rf);
         TextView txtResultat = findViewById(R.id.txt_resultat_rf);
         Button btnNouveau = findViewById(R.id.btn_nouveau_rf);
 
-        // استقبال النتيجة واسم المسافر
+        // bch na3mlou récupération l nom w résultat
         boolean verdict = getIntent().getBooleanExtra(
                 MainActivity.creerCle("3565", "VERDICT_FINAL"),
                 false
@@ -31,7 +31,7 @@ public class ResultActivity extends AppCompatActivity {
                 MainActivity.creerCle("3565", "NOM_VOYAGEUR")
         );
 
-        // تحديد النتيجة وتغيير لون الخلفية
+        // bch nchoufo resultat w nbadlou loun l background
         if (verdict) {
 
             layout.setBackgroundColor(Color.GREEN);
@@ -47,7 +47,7 @@ public class ResultActivity extends AppCompatActivity {
             );
         }
 
-        // العودة إلى المسافر الجديد
+        // bch narj3ou l act1
         btnNouveau.setOnClickListener(v -> {
 
             Intent intent = new Intent(
