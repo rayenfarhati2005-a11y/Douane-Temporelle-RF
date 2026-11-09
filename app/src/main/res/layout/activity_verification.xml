@@ -7,7 +7,7 @@
     android:padding="12dp"
     android:gravity="center_vertical">
 
-    <!-- الصورة على اليسار -->
+    <!-- image de la passeport 3al lissar -->
     <ImageView
         android:id="@+id/img_passport_rf"
         android:layout_width="0dp"
@@ -17,7 +17,7 @@
         android:contentDescription=""
         android:scaleType="centerInside"/>
 
-    <!-- المعلومات على اليمين -->
+    <!-- le infos 3al limin -->
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
