@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rf_bg_start">#0B1026</color>
+    <color name="rf_bg_end">#1E2F6B</color>
+    <color name="rf_accent">#00D1FF</color>
+    <color name="rf_accent_dark">#0A84FF</color>
+    <color name="rf_gold">#FFB84D</color>
+    <color name="rf_card">#FFFFFF</color>
+    <color name="rf_card_dark">#66000000</color>
+    <color name="rf_text_primary">#14182B</color>
+    <color name="rf_text_secondary">#5A6280</color>
+    <color name="rf_hint">#8F97B3</color>
+    <color name="rf_input_bg">#F1F4FB</color>
+    <color name="rf_input_stroke">#D5DBEC</color>
+    <color name="rf_success">#1DB954</color>
+    <color name="rf_success_dark">#14933F</color>
+    <color name="rf_danger">#E5484D</color>
+    <color name="rf_ripple">#33FFFFFF</color>
+</resources>
